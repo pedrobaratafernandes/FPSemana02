@@ -2,8 +2,8 @@
 # input O r n i t o r r i n c o
 # output nOort
 
-# ora = "Orangotangos"
-# teste = "Ornitorrinco"
+#ora = "Orangotangos"
+#teste = "Ornitorrinco"
 ora = input()
 teste = input()
 
@@ -23,4 +23,8 @@ x = ""
 
 for palavra in final:
     x +=palavra
-print(x)
+y = ""
+for palavra in sorted(x, key=str.lower):
+    y += palavra
+
+print(y)
