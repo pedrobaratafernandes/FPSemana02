@@ -2,14 +2,15 @@
 # input O r n i t o r r i n c o
 # output nOort
 
-#ora = "Orangotangos"
-#teste = "Ornitorrinco"
+# ora = "Orangotangos"
+# teste = "Ornitorrinco"
 ora = input()
 teste = input()
 
 palavra1 = set()
 palavra2 = set()
 final = set()
+
 for letra in ora:
     palavra1.add(letra)
 
@@ -19,12 +20,16 @@ for letra in teste:
 for letra in palavra1:
     if letra in palavra2:
         final.add(letra)
-x = ""
 
-for palavra in final:
-    x +=palavra
+
+def ordenar_letra(c):
+    return (c.lower(), c)
+
+
+ordenar = sorted(final, key=ordenar_letra)
 y = ""
-for palavra in sorted(x, key=str.lower):
+for palavra in ordenar:
     y += palavra
 
 print(y)
+
